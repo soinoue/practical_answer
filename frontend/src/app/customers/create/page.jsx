@@ -11,6 +11,7 @@ export default function CreatePage() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(formRef.current);
+    // backendで作成したidを受け取る
     const customer_id = await createCustomer(formData);
     router.push(`./create/confirm?customer_id=${customer_id}`);
   };
