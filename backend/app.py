@@ -8,11 +8,11 @@ from db_control import crud, mymodels
 # UUIDを生成するためのライブラリをインポート
 import uuid
 
-# MySQLのテーブル作成
-from db_control.create_tables import init_db
+# # MySQLのテーブル作成
+# from db_control.create_tables import init_db
 
-# アプリケーション初期化時にテーブルを作成
-init_db()
+# # アプリケーション初期化時にテーブルを作成
+# init_db()
 
 
 class Customer(BaseModel):
@@ -72,7 +72,7 @@ def read_one_customer(customer_id: str = Query(...)):
 def create_customer(customer: Customer):
 
     # 最大試行回数を設定
-    MAX_ATTEMPTS = 10
+    MAX_ATTEMPTS = 3
     attempts = 0
 
     while attempts < MAX_ATTEMPTS:
