@@ -72,7 +72,7 @@ def read_one_customer(customer_id: str = Query(...)):
 def create_customer(customer: Customer):
 
     # 最大試行回数を設定
-    MAX_ATTEMPTS = 3
+    MAX_ATTEMPTS = 10
     attempts = 0
 
     while attempts < MAX_ATTEMPTS:
