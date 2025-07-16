@@ -8,7 +8,7 @@ from db_control import crud, mymodels
 # UUIDを生成するためのライブラリをインポート
 import uuid
 
-# MySQLのテーブル作成
+# # MySQLのテーブル作成
 # from db_control.create_tables import init_db
 
 # # アプリケーション初期化時にテーブルを作成
